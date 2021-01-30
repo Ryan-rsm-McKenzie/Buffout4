@@ -51,6 +51,7 @@ namespace Settings
 	MAKE_SETTING(bSetting, "Patches", MemoryManager, true);
 	MAKE_SETTING(bSetting, "Patches", MemoryManagerDebug, false);
 	MAKE_SETTING(bSetting, "Patches", ScaleformAllocator, true);
+	MAKE_SETTING(bSetting, "Patches", ScrollingDoesntSwitchPOV, true);
 	MAKE_SETTING(bSetting, "Patches", SmallBlockAllocator, true);
 	MAKE_SETTING(bSetting, "Patches", WorkshopMenu, true);
 

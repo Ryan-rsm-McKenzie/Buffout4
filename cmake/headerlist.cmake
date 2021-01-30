@@ -27,6 +27,7 @@ set(headers ${headers}
 	src/Patches/MemoryManagerPatch.h
 	src/Patches/Patches.h
 	src/Patches/ScaleformAllocatorPatch.h
+	src/Patches/ScrollingDoesntSwitchPOV.h
 	src/Patches/SmallBlockAllocatorPatch.h
 	src/Patches/WorkshopMenuPatch.h
 	src/Warnings/CreateTexture2DWarning.h

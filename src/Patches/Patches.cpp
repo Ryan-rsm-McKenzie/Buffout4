@@ -9,6 +9,7 @@
 #include "Patches/MaxStdIOPatch.h"
 #include "Patches/MemoryManagerPatch.h"
 #include "Patches/ScaleformAllocatorPatch.h"
+#include "Patches/ScrollingDoesntSwitchPOV.h"
 #include "Patches/SmallBlockAllocatorPatch.h"
 #include "Patches/WorkshopMenuPatch.h"
 
@@ -53,6 +54,10 @@ namespace Patches
 
 		if (*Settings::ScaleformAllocator) {
 			ScaleformAllocatorPatch::Install();
+		}
+
+		if (*Settings::ScrollingDoesntSwitchPOV) {
+			ScrollingDoesntSwitchPOVPatch::Install();
 		}
 
 		if (*Settings::SmallBlockAllocator) {

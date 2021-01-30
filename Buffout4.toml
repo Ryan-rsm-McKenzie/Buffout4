@@ -20,6 +20,7 @@ MaxStdIO = -1                     # Replaces the maximum stdio handles
 MemoryManager = true              # Replaces the global memory manager with os allocators
 MemoryManagerDebug = false        # Enables debug tracing to determine faulting modules
 ScaleformAllocator = true         # Replaces the scaleform memory allocator with os allocators
+ScrollingDoesntSwitchPOV = false  # Disables swapping between 1st/3rd person when using scroll to zoom, making it require manual swapping
 SmallBlockAllocator = true        # Replaces the small block memory allocators with os allocators
 WorkshopMenu = true               # Alleviates lag while opening the workshop menu
 
