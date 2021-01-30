@@ -14,6 +14,7 @@ Achievements = true               # Enables achievements on modded saves
 BSMTAManager = true               # General rendering performance improvement
 BSPreCulledObjects = true         # General rendering performance improvement
 BSTextureStreamerLocalHeap = true # Replaces the texture streamer's local heap with os allocators
+ExitSave = false                  # Disables saving on exit
 HavokMemorySystem = true          # Replaces the havok memory system with os allocators
 MaxStdIO = -1                     # Replaces the maximum stdio handles
 MemoryManager = true              # Replaces the global memory manager with os allocators

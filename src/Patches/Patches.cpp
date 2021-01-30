@@ -4,6 +4,7 @@
 #include "Patches/BSMTAManagerPatch.h"
 #include "Patches/BSPreCulledObjectsPatch.h"
 #include "Patches/BSTextureStreamerLocalHeapPatch.h"
+#include "Patches/ExitSavePatch.h"
 #include "Patches/HavokMemorySystemPatch.h"
 #include "Patches/MaxStdIOPatch.h"
 #include "Patches/MemoryManagerPatch.h"
@@ -36,6 +37,10 @@ namespace Patches
 
 		if (*Settings::BSTextureStreamerLocalHeap) {
 			BSTextureStreamerLocalHeapPatch::Install();
+		}
+
+		if (*Settings::ExitSave) {
+			ExitSavePatch::Install();
 		}
 
 		if (*Settings::HavokMemorySystem) {

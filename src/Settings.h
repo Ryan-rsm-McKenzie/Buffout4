@@ -45,6 +45,7 @@ namespace Settings
 	MAKE_SETTING(bSetting, "Patches", BSMTAManager, true);
 	MAKE_SETTING(bSetting, "Patches", BSPreCulledObjects, true);
 	MAKE_SETTING(bSetting, "Patches", BSTextureStreamerLocalHeap, true);
+	MAKE_SETTING(bSetting, "Patches", ExitSave, true);
 	MAKE_SETTING(bSetting, "Patches", HavokMemorySystem, true);
 	MAKE_SETTING(iSetting, "Patches", MaxStdIO, -1);
 	MAKE_SETTING(bSetting, "Patches", MemoryManager, true);
