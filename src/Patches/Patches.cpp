@@ -9,7 +9,7 @@
 #include "Patches/MaxStdIOPatch.h"
 #include "Patches/MemoryManagerPatch.h"
 #include "Patches/ScaleformAllocatorPatch.h"
-#include "Patches/ScrollingDoesntSwitchPOV.h"
+#include "Patches/ScrollingDoesntSwitchPOVPatch.h"
 #include "Patches/SmallBlockAllocatorPatch.h"
 #include "Patches/WorkshopMenuPatch.h"
 
