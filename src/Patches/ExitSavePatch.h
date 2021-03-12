@@ -2,15 +2,27 @@
 
 namespace Patches::ExitSavePatch
 {
+	namespace detail
+	{
+		inline void DisableSave()
+		{
+			constexpr auto start = 0x133;
+			constexpr auto end = 0x19C;
+			const auto target = REL::ID(927422).address();
+			REL::safe_fill(target + start, REL::NOP, end - start);
+		}
+
+		inline void DisableMessage()
+		{
+			REL::Relocation<std::uintptr_t> target{ REL::ID(870227), 0x4BF + 0x1 };
+			REL::safe_write(target.address(), std::uint16_t{ 0x255 });
+		}
+	}
+
 	inline void Install()
 	{
-		// Disable exit save
-		REL::Relocation<std::uintptr_t> target1{ REL::ID(927422), 0x16B };
-		REL::safe_fill(target1.address(), REL::NOP, 0x5);
-
-		// Disable exit save message
-		REL::Relocation<std::uintptr_t> target2{ REL::ID(870227), 0x4BF + 0x1 };
-		REL::safe_write(target2.address(), std::uint16_t{ 0x255 });
+		detail::DisableSave();
+		detail::DisableMessage();
 
 		logger::info("installed ExitSave patch"sv);
 	}
