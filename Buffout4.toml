@@ -15,12 +15,14 @@ Achievements = true               # Enables achievements on modded saves
 BSMTAManager = true               # General rendering performance improvement
 BSPreCulledObjects = true         # General rendering performance improvement
 BSTextureStreamerLocalHeap = true # Replaces the texture streamer's local heap with os allocators
+ExitSave = false                  # Disables saving on exit
 HavokMemorySystem = true          # Replaces the havok memory system with os allocators
 INISettingCollection = true       # Massively improves startup times for large load orders by optimizing ini setting loading
 MaxStdIO = -1                     # Replaces the maximum stdio handles
 MemoryManager = true              # Replaces the global memory manager with os allocators
 MemoryManagerDebug = false        # Enables debug tracing to determine faulting modules
 ScaleformAllocator = true         # Replaces the scaleform memory allocator with os allocators
+ScrollingDoesntSwitchPOV = false  # Disables swapping between 1st/3rd person when using scroll to zoom, making it require manual swapping
 SmallBlockAllocator = true        # Replaces the small block memory allocators with os allocators
 WorkshopMenu = true               # Alleviates lag while opening the workshop menu
 

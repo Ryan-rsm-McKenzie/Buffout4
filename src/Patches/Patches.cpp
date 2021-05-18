@@ -4,11 +4,13 @@
 #include "Patches/BSMTAManagerPatch.h"
 #include "Patches/BSPreCulledObjectsPatch.h"
 #include "Patches/BSTextureStreamerLocalHeapPatch.h"
+#include "Patches/ExitSavePatch.h"
 #include "Patches/HavokMemorySystemPatch.h"
 #include "Patches/INISettingCollectionPatch.h"
 #include "Patches/MaxStdIOPatch.h"
 #include "Patches/MemoryManagerPatch.h"
 #include "Patches/ScaleformAllocatorPatch.h"
+#include "Patches/ScrollingDoesntSwitchPOVPatch.h"
 #include "Patches/SmallBlockAllocatorPatch.h"
 #include "Patches/WorkshopMenuPatch.h"
 
@@ -39,6 +41,10 @@ namespace Patches
 			BSTextureStreamerLocalHeapPatch::Install();
 		}
 
+		if (*Settings::ExitSave) {
+			ExitSavePatch::Install();
+		}
+
 		if (*Settings::HavokMemorySystem) {
 			HavokMemorySystemPatch::Install();
 		}
@@ -53,6 +59,10 @@ namespace Patches
 
 		if (*Settings::ScaleformAllocator) {
 			ScaleformAllocatorPatch::Install();
+		}
+
+		if (*Settings::ScrollingDoesntSwitchPOV) {
+			ScrollingDoesntSwitchPOVPatch::Install();
 		}
 
 		if (*Settings::SmallBlockAllocator) {
